@@ -20,7 +20,7 @@ const Index = () => {
       
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 relative">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 relative">
         {/* Hero Section - only on marketplace */}
         {activeTab === 'marketplace' && (
           <div className="text-center mb-8 md:mb-12 px-4">
@@ -54,7 +54,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 mt-12 md:mt-16 py-6 md:py-8">
+      <footer className="border-t border-border/50 mt-8 md:mt-12 lg:mt-16 py-4 md:py-6 lg:py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs text-muted-foreground">
             Running on Stacks Testnet • Contract: STGDS0Y17973EN5TCHNHGJJ9B31XWQ5YXBQ0KQ2Y.dual-pay-market
