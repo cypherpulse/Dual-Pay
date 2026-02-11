@@ -115,7 +115,7 @@ export function BuyModal({ item, isOpen, onClose, onSuccess }: BuyModalProps) {
               id="sbtc-toggle"
               checked={payWithSbtc}
               onCheckedChange={setPayWithSbtc}
-              className={`min-h-[24px] ${payWithSbtc ? 'animate-glow-pulse' : ''}`}
+              className={`min-h-[28px] ${payWithSbtc ? 'animate-glow-pulse' : ''}`}
             />
           </div>
 
