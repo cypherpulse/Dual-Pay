@@ -95,14 +95,14 @@ export function ListItem({ onSuccess }: ListItemProps) {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Item Name */}
             <div className="space-y-2">
-              <Label htmlFor="name">Item Name</Label>
+              <Label htmlFor="name" className="text-sm md:text-base">Item Name</Label>
               <Input
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g., Rare Bitcoin Collectible"
                 maxLength={100}
-                className="bg-secondary border-border"
+                className="bg-secondary border-border h-10 md:h-11 text-base"
               />
               <p className="text-xs text-muted-foreground">{name.length}/100 characters</p>
             </div>
