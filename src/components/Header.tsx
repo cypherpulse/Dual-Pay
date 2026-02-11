@@ -15,15 +15,15 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-14 sm:h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <div className="relative">
-            <BitcoinIcon size={32} className="text-primary bitcoin-icon animate-float md:w-10 md:h-10" />
+            <BitcoinIcon size={28} className="text-primary bitcoin-icon animate-float sm:w-8 sm:h-8 md:w-10 md:h-10" />
             <div className="absolute inset-0 blur-xl bg-primary/30 rounded-full" />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-lg md:text-xl font-bold text-foreground glow-text">
+            <h1 className="text-base sm:text-lg md:text-xl font-bold text-foreground glow-text">
               DualPay Market
             </h1>
             <p className="text-xs text-muted-foreground hidden sm:block">
@@ -52,7 +52,7 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
         </nav>
 
         {/* Wallet Button */}
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {isConnected ? (
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-lg">
@@ -65,7 +65,7 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
                 variant="outline"
                 size="sm"
                 onClick={disconnectWallet}
-                className="border-border hover:border-destructive hover:text-destructive h-9 px-3"
+                className="border-border hover:border-destructive hover:text-destructive h-8 px-2 sm:h-9 sm:px-3"
               >
                 <LogOut className="w-4 h-4" />
                 <span className="hidden sm:inline ml-2">Disconnect</span>
@@ -75,7 +75,7 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
             <Button
               onClick={connectWallet}
               disabled={isConnecting}
-              className="btn-bitcoin px-3 md:px-4 py-2 h-9 md:h-10 rounded-lg animate-glow-pulse text-sm md:text-base"
+              className="btn-bitcoin px-3 sm:px-4 py-2 h-8 sm:h-10 rounded-lg animate-glow-pulse text-sm sm:text-base"
             >
               {isConnecting ? (
                 <>
