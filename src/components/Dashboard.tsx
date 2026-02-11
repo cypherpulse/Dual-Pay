@@ -136,7 +136,7 @@ export function Dashboard() {
               <Loader2 className="w-5 h-5 md:w-6 md:h-6 animate-spin text-muted-foreground" />
             ) : (
               <div className="space-y-2">
-                <p className="text-2xl md:text-3xl font-bold">
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold">
                   {formatMicroUnits(stxEarnings)} <span className="text-base md:text-lg text-muted-foreground">STX</span>
                 </p>
                 <p className="text-xs md:text-sm text-muted-foreground flex items-center gap-1">
@@ -152,20 +152,20 @@ export function Dashboard() {
         <Card className="card-glow overflow-hidden">
           <div className="h-1 bg-gradient-bitcoin" />
           <CardHeader className="pb-2">
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Bitcoin className="w-5 h-5 text-primary" />
+            <CardTitle className="flex items-center gap-2 text-base md:text-lg">
+              <Bitcoin className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               sBTC Earnings <BitcoinSymbol className="text-primary" />
             </CardTitle>
           </CardHeader>
           <CardContent>
             {isLoading ? (
-              <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
+              <Loader2 className="w-5 h-5 md:w-6 md:h-6 animate-spin text-muted-foreground" />
             ) : (
               <div className="space-y-2">
-                <p className="text-3xl font-bold text-primary">
-                  {formatMicroUnits(sbtcEarnings, 8)} <span className="text-lg text-muted-foreground">sBTC</span>
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-primary">
+                  {formatMicroUnits(sbtcEarnings, 8)} <span className="text-base md:text-lg text-muted-foreground">sBTC</span>
                 </p>
-                <p className="text-sm text-muted-foreground flex items-center gap-1">
+                <p className="text-xs md:text-sm text-muted-foreground flex items-center gap-1">
                   <TrendingUp className="w-3 h-3" />
                   From Bitcoin L2 payments
                 </p>
