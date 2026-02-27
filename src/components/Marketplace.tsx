@@ -93,12 +93,12 @@ export function Marketplace() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-4 sm:mb-6">
         <div>
-          <h2 className="text-xl md:text-2xl font-bold glow-text">Marketplace</h2>
-          <p className="text-sm md:text-base text-muted-foreground">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold glow-text">Marketplace</h2>
+          <p className="text-xs sm:text-sm md:text-base text-muted-foreground">
             {items.length} item{items.length !== 1 ? 's' : ''} available
           </p>
         </div>
@@ -106,15 +106,14 @@ export function Marketplace() {
           variant="outline"
           size="sm"
           onClick={fetchItems}
-          className="border-border hover:border-primary self-start sm:self-auto h-9 px-3 md:px-4"
+          className="border-border hover:border-primary self-start sm:self-auto h-8 sm:h-9 px-2 sm:px-3 md:px-4"
         >
           <RefreshCw className="w-4 h-4 mr-2" />
           <span className="hidden sm:inline">Refresh</span>
         </Button>
       </div>
-
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+      <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
         {items.map((item, index) => (
           <div
             key={item.id}
