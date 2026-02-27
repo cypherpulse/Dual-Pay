@@ -78,38 +78,29 @@ export function ListItem({ onSuccess }: ListItemProps) {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <Card className="card-glow overflow-hidden">
-        <div className="h-1 bg-gradient-bitcoin" />
-        
+      <Card className="card-glow max-w-full w-full">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-2xl">
-            <Package className="w-6 h-6 text-primary" />
-            List New Item
-          </CardTitle>
-          <CardDescription>
-            Create a listing and accept payments in STX or sBTC <BitcoinSymbol className="text-primary" />
-          </CardDescription>
+          <CardTitle className="text-base sm:text-lg md:text-xl">List an Item</CardTitle>
+          <CardDescription className="text-xs sm:text-sm md:text-base">Fill out the form to list your item for sale.</CardDescription>
         </CardHeader>
-
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Item Name */}
-            <div className="space-y-2">
-              <Label htmlFor="name" className="text-sm md:text-base">Item Name</Label>
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-6">
+            {/* Name */}
+            <div className="space-y-1 sm:space-y-2">
+              <Label htmlFor="name" className="text-xs sm:text-sm md:text-base">Item Name</Label>
               <Input
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g., Rare Bitcoin Collectible"
                 maxLength={100}
-                className="bg-secondary border-border h-10 md:h-11 text-base"
+                className="bg-secondary border-border h-8 sm:h-10 md:h-11 text-xs sm:text-base"
               />
-              <p className="text-xs text-muted-foreground">{name.length}/100 characters</p>
+              <p className="text-[10px] sm:text-xs text-muted-foreground">{name.length}/100 characters</p>
             </div>
-
             {/* Description */}
-            <div className="space-y-2">
-              <Label htmlFor="description" className="text-sm md:text-base">Description</Label>
+            <div className="space-y-1 sm:space-y-2">
+              <Label htmlFor="description" className="text-xs sm:text-sm md:text-base">Description</Label>
               <Textarea
                 id="description"
                 value={description}
@@ -117,15 +108,14 @@ export function ListItem({ onSuccess }: ListItemProps) {
                 placeholder="Describe your item in detail..."
                 maxLength={200}
                 rows={3}
-                className="bg-secondary border-border resize-none h-20 md:h-auto text-base"
+                className="bg-secondary border-border resize-none h-16 sm:h-20 md:h-auto text-xs sm:text-base"
               />
-              <p className="text-xs text-muted-foreground">{description.length}/200 characters</p>
+              <p className="text-[10px] sm:text-xs text-muted-foreground">{description.length}/200 characters</p>
             </div>
-
             {/* Price and Quantity */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="price" className="text-sm md:text-base">Price (STX)</Label>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
+              <div className="space-y-1 sm:space-y-2">
+                <Label htmlFor="price" className="text-xs sm:text-sm md:text-base">Price (STX)</Label>
                 <div className="relative">
                   <Input
                     id="price"
@@ -135,16 +125,15 @@ export function ListItem({ onSuccess }: ListItemProps) {
                     value={price}
                     onChange={(e) => setPrice(e.target.value)}
                     placeholder="0.00"
-                    className="bg-secondary border-border pr-12 h-10 md:h-11 text-base"
+                    className="bg-secondary border-border pr-8 sm:pr-12 h-8 sm:h-10 md:h-11 text-xs sm:text-base"
                   />
-                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">
+                  <span className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-xs sm:text-sm text-muted-foreground">
                     STX
                   </span>
                 </div>
               </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="quantity" className="text-sm md:text-base">Quantity</Label>
+              <div className="space-y-1 sm:space-y-2">
+                <Label htmlFor="quantity" className="text-xs sm:text-sm md:text-base">Quantity</Label>
                 <Input
                   id="quantity"
                   type="number"
@@ -152,11 +141,10 @@ export function ListItem({ onSuccess }: ListItemProps) {
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
                   placeholder="1"
-                  className="bg-secondary border-border h-10 md:h-11 text-base"
+                  className="bg-secondary border-border h-8 sm:h-10 md:h-11 text-xs sm:text-base"
                 />
               </div>
             </div>
-
             {/* Info Box */}
             <div className="p-4 rounded-lg bg-primary/10 border border-primary/20 flex items-start gap-3">
               <Sparkles className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -169,7 +157,6 @@ export function ListItem({ onSuccess }: ListItemProps) {
                 </p>
               </div>
             </div>
-
             {/* Submit Button */}
             <Button
               type="submit"
