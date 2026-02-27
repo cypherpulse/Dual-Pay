@@ -101,19 +101,19 @@ export function Dashboard() {
   const hasEarnings = stxEarnings > 0 || sbtcEarnings > 0;
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-full xl:max-w-4xl mx-auto space-y-6 md:space-y-8">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 md:mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-4 sm:mb-6">
         <div>
-          <h2 className="text-xl md:text-2xl font-bold glow-text">Seller Dashboard</h2>
-          <p className="text-sm md:text-base text-muted-foreground">Track and withdraw your earnings</p>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold glow-text">Seller Dashboard</h2>
+          <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Track and withdraw your earnings</p>
         </div>
         <Button
           variant="outline"
           size="sm"
           onClick={fetchEarnings}
           disabled={isLoading}
-          className="border-border hover:border-primary self-start sm:self-auto h-9 px-3 md:px-4"
+          className="border-border hover:border-primary self-start sm:self-auto h-8 sm:h-9 px-2 sm:px-3 md:px-4"
         >
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
           <span className="hidden sm:inline">Refresh</span>
@@ -121,7 +121,7 @@ export function Dashboard() {
       </div>
 
       {/* Earnings Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-6">
         {/* STX Earnings */}
         <Card className="card-glow overflow-hidden">
           <div className="h-1 bg-gradient-to-r from-blue-500 to-blue-600" />
