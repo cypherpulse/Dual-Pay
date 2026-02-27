@@ -15,18 +15,18 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto flex h-14 sm:h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-12 sm:h-14 md:h-16 items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8">
         {/* Logo */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
           <div className="relative">
-            <BitcoinIcon size={28} className="text-primary bitcoin-icon animate-float sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            <BitcoinIcon size={24} className="text-primary bitcoin-icon animate-float w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
             <div className="absolute inset-0 blur-xl bg-primary/30 rounded-full" />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-base sm:text-lg md:text-xl font-bold text-foreground glow-text">
+            <h1 className="text-sm sm:text-base md:text-lg font-bold text-foreground glow-text">
               DualPay Market
             </h1>
-            <p className="text-xs text-muted-foreground hidden sm:block">
+            <p className="text-[10px] sm:text-xs text-muted-foreground hidden sm:block">
               Pay with STX or sBTC <BitcoinSymbol className="text-primary" /> on Bitcoin L2
             </p>
           </div>
@@ -52,7 +52,7 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
         </nav>
 
         {/* Wallet Button */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
           {isConnected ? (
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-lg">
@@ -96,8 +96,8 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden border-t border-border/50 px-4 py-3">
-        <nav className="flex items-center justify-center gap-3">
+      <div className="md:hidden border-t border-border/50 px-2 sm:px-4 py-2 sm:py-3">
+        <nav className="flex items-center justify-center gap-2 sm:gap-3">
           {['marketplace', 'list-item', 'dashboard'].map((tab) => (
             <button
               key={tab}
