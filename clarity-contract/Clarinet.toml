@@ -5,12 +5,8 @@ authors = []
 telemetry = true
 cache_dir = "./.cache"
 
-[contracts.dual-pay-market]
-path = "contracts/dual-pay-market.clar"
-epoch = "2.05"
-
-[contracts.sbtc-token]
-path = "contracts/sbtc-token.clar"
+[contracts.dual-pay-marketv2]
+path = "contracts/dual-pay-marketv2.clar"
 epoch = "2.05"
 
 [repl.analysis]
